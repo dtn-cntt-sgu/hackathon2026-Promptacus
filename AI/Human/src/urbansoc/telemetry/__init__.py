@@ -1,0 +1,37 @@
+"""Telemetry and observability module for Urban Safety AI-SOC."""
+
+from urbansoc.telemetry.audit_logger import BehaviorAuditLogger
+from urbansoc.telemetry.debug_logger import (
+    UnifiedSOCDebugLogger,
+    debug_logger,
+    debug_log,
+    log_pipeline_step,
+    log_mmaction_event,
+    log_vlm_reasoning,
+    log_blind_spot_hop,
+)
+from urbansoc.telemetry.soc_logger import SOCLogger
+from urbansoc.telemetry.webhook_dispatcher import (
+    EventThrottler,
+    WebhookDispatcher,
+    compute_forensic_sha256,
+    crop_subject_image,
+    encode_image_and_hash,
+)
+
+__all__ = [
+    "BehaviorAuditLogger",
+    "SOCLogger",
+    "WebhookDispatcher",
+    "EventThrottler",
+    "compute_forensic_sha256",
+    "crop_subject_image",
+    "encode_image_and_hash",
+    "UnifiedSOCDebugLogger",
+    "debug_logger",
+    "debug_log",
+    "log_pipeline_step",
+    "log_mmaction_event",
+    "log_vlm_reasoning",
+    "log_blind_spot_hop",
+]
